@@ -27,7 +27,7 @@ function determineChance() {
        const capColor = color[0].toUpperCase() + color.slice(1);
        document.body.innerText = `${capColor} - 1 in ${numberWithCommas(chance)}`;
        document.body.style.backgroundColor = color;
-       localStorage.setItem("spins", int(spins) + 1)
+       spins = spins + 1
        
        return;
     }
@@ -35,7 +35,7 @@ function determineChance() {
   
   // If here, no hits
   document.body.innerText = 'Nothing.';
-  localStorage.setItem("spins", int(spins) + 1)
+  spins = spins + 1
 }
 
 determineChance();
