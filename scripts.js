@@ -3,8 +3,7 @@ if (!spins) {
   localStorage.setItem("spins", 0)
 }
 
-strVal = spins.toString()
-document.title = "Spins: " + strVal
+document.title = `Spins: ${spins}`
 
 const chances = [
   { chance: 10000000, color: 'pink' },
