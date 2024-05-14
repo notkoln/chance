@@ -1,5 +1,5 @@
 const chances = [
-  { chance: 10000000, color: '' },
+  { chance: 10000000, color: 'pink' },
   { chance: 1000000, color: 'purple' },
   { chance: 100000, color: 'blue' },
   { chance: 10000, color: 'green' },
