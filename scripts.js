@@ -38,7 +38,7 @@ function determineChance() {
   
   // If here, no hits
   document.body.innerText = 'Nothing.'
-  spins = spins + 1
+  uas(spins + 1)
 }
 
 determineChance()
