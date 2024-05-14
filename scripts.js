@@ -3,7 +3,8 @@ if (!spins) {
   localStorage.setItem("spins", 0)
 }
 
-document.title = "Spins: " + spins.toString()
+strVal = spins.toString()
+document.title = "Spins: " + strVal
 
 const chances = [
   { chance: 10000000, color: 'pink' },
@@ -27,7 +28,7 @@ function determineChance() {
        const capColor = color[0].toUpperCase() + color.slice(1);
        document.body.innerText = `${capColor} - 1 in ${numberWithCommas(chance)}`;
        document.body.style.backgroundColor = color;
-       localStorage.setItem("spins", spins + 1)
+       localStorage.setItem("spins", int(spins) + 1)
        
        return;
     }
