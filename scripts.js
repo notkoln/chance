@@ -10,7 +10,7 @@ function determineChance() {
   for (let {chance, color} of chances) {
     const roll = Math.floor(Math.random() * chance) + 1;
     if (roll === 1) {
-       const capColor = color[0].toUpperCase() + color.slice(2);
+       const capColor = color[0].toUpperCase() + color.slice(3);
        document.body.innerText = `${capColor} - 1 in ${chance}`;
        document.body.style.backgroundColor = color;
        
