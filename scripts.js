@@ -2,7 +2,8 @@ const chances = [
   { chance: 10000, color: 'green' },
   { chance: 1000, color: 'yellow' },
   { chance: 100, color: 'orange' },
-  { chance: 10, color: 'red' },
+  { chance: 10, color: 'reed' },
+  { chance: 5, color: 'gray' },
 ];
 
 function determineChance() {
