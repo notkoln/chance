@@ -35,6 +35,7 @@ function determineChance() {
   
   // If here, no hits
   document.body.innerText = 'Nothing.';
+  localStorage.setItem("spins", int(spins) + 1)
 }
 
 determineChance();
