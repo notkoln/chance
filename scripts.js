@@ -1,24 +1,24 @@
-var chance1 = Math.floor(Math.random() * 10) + 1
-var chance2 = Math.floor(Math.random() * 100) + 1
-var chance3 = Math.floor(Math.random() * 1000) + 1
-var chance4 = Math.floor(Math.random() * 10000) + 1
+const chances = [
+  { chance: 10000, color: 'green' },
+  { chance: 1000, color: 'yellow' },
+  { chance: 100, color: 'orange' },
+  { chance: 10, color: 'red' },
+];
 
-if (chance1 === 1) {
-  document.body.innerText = "Red - 1 in 10"
-  document.body.style.backgroundColor = "red"
+function determineChance() {
+  for (let {chance, color} of chances) {
+    const roll = Math.floor(Math.random() * chance) + 1;
+    if (roll === 1) {
+       const capColor = color[0].toUpperCase() + color.slice(2);
+       document.body.innerText = `${capColor} - 1 in ${chance}`;
+       document.body.style.backgroundColor = color;
+       
+       return;
+    }
+  }
+  
+  // If here, no hits
+  document.body.innerText = 'Nothing.';
 }
 
-if (chance2 === 1) {
-  document.body.innerText = "Orange - 1 in 100"
-  document.body.style.backgroundColor = "orange"
-}
-
-if (chance3 === 1) {
-  document.body.innerText = "Yellow - 1 in 1,000"
-  document.body.style.backgroundColor = "yellow"
-}
-
-if (chance4 === 1) {
-  document.body.innerText = "Green - 1 in 10,000"
-  document.body.style.backgroundColor = "green"
-}
+determineChance();
