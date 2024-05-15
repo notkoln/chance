@@ -1,4 +1,5 @@
 var spins = localStorage.getItem("spins")
+var spints = parseInt(localStorage.getItem("spins"))
 if (!spins) {
   localStorage.setItem("spins", 0)
 }
@@ -14,11 +15,6 @@ const chances = [
   { chance: 5, color: 'gray' },
 ]
 
-function uas(val) {
-  localStorage.setItem("spins", val)
-  document.title = `Spins: ${spins}`
-}
-
 function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
 }
@@ -30,7 +26,8 @@ function determineChance() {
        const capColor = color[0].toUpperCase() + color.slice(1)
        document.body.innerText = `${capColor} - 1 in ${numberWithCommas(chance)}`
        document.body.style.backgroundColor = color
-       uas(spins + 1)
+       localStorage.setItem("spins", ++spints)
+       document.title = `Spins: ${spints}`
        
        return
     }
@@ -38,7 +35,8 @@ function determineChance() {
   
   // If here, no hits
   document.body.innerText = 'Nothing.'
-  uas(int(spins) + 1)
+  localStorage.setItem("spins", ++spints)
+  document.title = `Spins: ${spints}`
 }
 
 determineChance()
