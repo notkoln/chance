@@ -1,7 +1,9 @@
 var spins = localStorage.getItem("spins")
-if (spins === null) {
+if (!spins) {
   localStorage.setItem("spins", "0")
 }
+
+localStorage.clear()
 
 const chances = [
   { chance: 10000000, color: 'pink' },
