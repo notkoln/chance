@@ -25,7 +25,7 @@ function numberWithCommas(x) {
 
 var spints = parseInt(localStorage.getItem("rolls"))
 localStorage.setItem("rolls", ++spints)
-document.title = `Spins: ${spints}`
+document.title = `Spins: ${numberWithCommas(spints)}`
 
 function determineChance() {
   for (let {chance, color} of chances) {
