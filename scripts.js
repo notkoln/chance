@@ -4,6 +4,7 @@ if (!spins) {
 }
 
 const chances = [
+  { chance: 10000000000000, color: 'tomato' },
   { chance: 1000000000000, color: 'magenta' },
   { chance: 100000000000, color: 'cyan' },
   { chance: 10000000000, color: 'lime' },
