@@ -36,7 +36,7 @@ function determineChance() {
   // If here, no hits
   document.body.innerText = 'Nothing.'
   var spints = parseInt(localStorage.getItem("rolls"))
-  localStorage.setItem("rolls", spints++)
+  localStorage.setItem("rolls", ++spints)
   document.title = `Spins: ${spints}`
 }
 
