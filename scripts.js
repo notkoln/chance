@@ -32,7 +32,7 @@ function determineChance() {
     const roll = Math.floor(Math.random() * chance) + 1
     if (roll === 1) {
        const capColor = color[0].toUpperCase() + color.slice(1)
-       document.body.innerText = `${capColor} - 1 in ${numberWithCommas(chance)}`
+       document.getElementById("txt").innerText = `${capColor} - 1 in ${numberWithCommas(chance)}`
        document.body.style.backgroundColor = color
        
        return
@@ -40,7 +40,7 @@ function determineChance() {
   }
   
   // If here, no hits
-  document.body.innerText = 'Nothing.'
+  document.getElementById("txt").innerText = 'Nothing.'
 }
 
 determineChance()
