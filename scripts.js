@@ -1,7 +1,7 @@
 var spins = localStorage.getItem("spins")
 var spints = parseInt(localStorage.getItem("spins"))
 if (!spins) {
-  localStorage.setItem("spins", 0)
+  localStorage.setItem("spins", "0")
 }
 
 const chances = [
