@@ -3,12 +3,6 @@ if (!spins) {
   localStorage.setItem("rolls", "0")
 }
 
-window.onload = function() {
-  var spints = parseInt(localStorage.getItem("rolls"))
-  localStorage.setItem("rolls", ++spints)
-  document.title = `Spins: ${spints}`
-}
-
 const chances = [
   { chance: 10000000, color: 'pink' },
   { chance: 1000000, color: 'purple' },
@@ -41,3 +35,6 @@ function determineChance() {
 }
 
 determineChance()
+var spints = parseInt(localStorage.getItem("rolls"))
+localStorage.setItem("rolls", ++spints)
+document.title = `Spins: ${spints}`
