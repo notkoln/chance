@@ -1,5 +1,4 @@
 var spins = localStorage.getItem("spins")
-var spints = parseInt(localStorage.getItem("spins"))
 if (!spins) {
   localStorage.setItem("spins", "0")
 }
@@ -26,6 +25,7 @@ function determineChance() {
        const capColor = color[0].toUpperCase() + color.slice(1)
        document.body.innerText = `${capColor} - 1 in ${numberWithCommas(chance)}`
        document.body.style.backgroundColor = color
+       var spints = parseInt(localStorage.getItem("spins"))
        localStorage.setItem("spins", ++spints)
        document.title = `Spins: ${spints}`
        
@@ -35,6 +35,7 @@ function determineChance() {
   
   // If here, no hits
   document.body.innerText = 'Nothing.'
+  var spints = parseInt(localStorage.getItem("spins"))
   localStorage.setItem("spins", ++spints)
   document.title = `Spins: ${spints}`
 }
