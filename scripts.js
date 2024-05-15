@@ -1,5 +1,5 @@
 var spins = localStorage.getItem("spins")
-if (!spins) {
+if (spins === null) {
   localStorage.setItem("spins", "0")
 }
 
