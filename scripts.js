@@ -42,7 +42,7 @@ function determineChance() {
 }
 
 window.onkeyup(function(e) {
-  if (e.code === "Space") {
+  if (e.key == " " || e.code == "Space" || e.keyCode == 32) {
     determineChance()
     var spints = parseInt(localStorage.getItem("rolls"))
     localStorage.setItem("rolls", ++spints)
