@@ -38,7 +38,7 @@ function determineChance() {
   }
   
   // If here, no hits
-  document.getElementById("txt").innerText = 'Nothing.'
+  document.getElementById("txt").innerText = 'Test.'
   document.body.style.backgroundColor = 'white'
 }
 
