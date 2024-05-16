@@ -18,7 +18,7 @@ const chances = [
   { chance: 100, color: 'orange' },
   { chance: 10, color: 'red' },
   { chance: 5, color: 'tan' },
-  { chance: 2, color: 'gray' },
+  { chance: 3, color: 'gray' },
 ]
 
 function numberWithCommas(x) {
