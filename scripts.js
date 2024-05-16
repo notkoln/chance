@@ -1,7 +1,14 @@
 var spins = localStorage.getItem("rolls")
+var finds = localStorage.getItem("finds")
 if (!spins) {
   localStorage.setItem("rolls", "0")
 }
+
+if (!finds) {
+  localStorage.setItem("finds", document.getElementById("finds").innerHTML)
+}
+
+document.getElementById("finds").innerHTML = finds
 
 const chances = [
   { chance: 10000000000000, color: 'tomato' },
@@ -35,6 +42,7 @@ function determineChance() {
        const capColor = color[0].toUpperCase() + color.slice(1)
        document.getElementById("txt").innerText = `${capColor} - 1 in ${numberWithCommas(chance)}`
        document.getElementById("finds").innerHTML = `${capColor}<br>`
+       localStorage.setItem("finds", document.getElementById("finds").innerHTML)
        document.body.style.backgroundColor = color
        
        return
