@@ -38,7 +38,7 @@ function determineChance() {
   }
   
   // If here, no hits
-  document.getElementById("txt").innerText = 'Test.'
+  document.getElementById("txt").innerText = 'Nothing.'
   document.body.style.backgroundColor = 'white'
 }
 
@@ -49,7 +49,7 @@ document.body.onkeyup = function(e) {
   ) {
     determineChance()
     var spints = parseInt(localStorage.getItem("spins"))
-    localStorage.setItem("rolls" ++spints)
+    localStorage.setItem("rolls", ++spints)
     document.title = `Spins: ${spints}`
   }
 }
