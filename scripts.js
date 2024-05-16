@@ -25,10 +25,6 @@ function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
 }
 
-var spints = parseInt(localStorage.getItem("rolls"))
-localStorage.setItem("rolls", ++spints)
-document.title = `Spins: ${numberWithCommas(spints)}`
-
 function determineChance() {
   for (let {chance, color} of chances) {
     const roll = Math.floor(Math.random() * chance) + 1
@@ -46,11 +42,11 @@ function determineChance() {
   document.getElementById("txt").innerText = 'Nothing.'
 }
 
-document.body.onkeyup = function(e) {
-  if (e.key == " " ||
-      e.code == "Space" ||      
-      e.keyCode == 32      
-  ) {
+document.addEventListener('keyup', event => {
+  if (event.code === 'Space') {
     determineChance()
+    var spints = parseInt(localStorage.getItem("rolls"))
+    localStorage.setItem("rolls", ++spints)
+    document.title = `Spins: ${numberWithCommas(spints)}`
   }
-}
+})
