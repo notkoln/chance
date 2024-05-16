@@ -52,4 +52,5 @@ document.body.onkeyup = function(e) {
       e.keyCode == 32      
   ) {
     determineChance()
+  }
 }
