@@ -45,8 +45,8 @@ function determineChance() {
   document.getElementById("txt").innerText = 'Nothing.'
 }
 
-$(document).keyup(function(e) {
-  if (e.keyCode === 32) {
+document.body.keyup(function(e) {
+  if (e.key === " " || e.code === "Space" ||e.keyCode === 32) {
     determineChance()
   }
 })
