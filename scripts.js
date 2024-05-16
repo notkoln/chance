@@ -42,7 +42,14 @@ function determineChance() {
   }
   
   // If here, no hits
+  document.body.style.backgroundColor = 'white'
   document.getElementById("txt").innerText = 'Nothing.'
 }
 
-determineChance()
+document.body.onkeyup = function(e) {
+  if (e.key == " " ||
+      e.code == "Space" ||      
+      e.keyCode == 32      
+  ) {
+    determineChance()
+}
