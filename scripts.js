@@ -45,4 +45,8 @@ function determineChance() {
   document.getElementById("txt").innerText = 'Nothing.'
 }
 
-determineChance()
+$(document).keyup(function(e) {
+  if (e.keyCode === 32) {
+    determineChance()
+  }
+})
