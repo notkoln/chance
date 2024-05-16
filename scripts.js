@@ -41,7 +41,7 @@ function determineChance() {
     if (roll === 1) {
        const capColor = color[0].toUpperCase() + color.slice(1)
        document.getElementById("txt").innerText = `${capColor} - 1 in ${numberWithCommas(chance)}`
-       document.getElementById("finds").innerHTML = `${capColor}<br>`
+       document.getElementById("finds").innerHTML += `${capColor}<br>`
        localStorage.setItem("finds", document.getElementById("finds").innerHTML)
        document.body.style.backgroundColor = color
        
