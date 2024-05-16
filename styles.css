@@ -2,5 +2,12 @@ p {
   text-align: center;
   font-family: Cursive, Brush Script MT;
   font-size: 32px;
-  margin: auto
+  margin: auto;
+  user-select: none;
+}
+
+b {
+  left: 20%;
+  top: 30%;
+  position: absolute;
 }
