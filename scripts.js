@@ -17,13 +17,16 @@ const chances = [
   { chance: 1000, color: 'yellow' },
   { chance: 100, color: 'orange' },
   { chance: 10, color: 'red' },
-  { chance: 5, color: 'olive' },
-  { chance: 3, color: 'tan' },
+  { chance: 5, color: 'gray' },
 ]
 
 function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
 }
+
+var spints = parseInt(localStorage.getItem("rolls"))
+localStorage.setItem("rolls", ++spints)
+document.title = `Spins: ${numberWithCommas(spints)}`
 
 function determineChance() {
   for (let {chance, color} of chances) {
@@ -39,17 +42,6 @@ function determineChance() {
   
   // If here, no hits
   document.getElementById("txt").innerText = 'Nothing.'
-  document.body.style.backgroundColor = 'white'
 }
 
-document.body.onkeyup = function(e) {
-  if (e.key == " " ||
-      e.code == "Space" ||      
-      e.keyCode == 32      
-  ) {
-    determineChance()
-    var spints = parseInt(localStorage.getItem("spins"))
-    localStorage.setItem("rolls", ++spints)
-    document.title = `Spins: ${spints}`
-  }
-}
+determineChance()
