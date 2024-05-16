@@ -41,13 +41,11 @@ function determineChance() {
   document.getElementById("txt").innerText = 'Nothing.'
 }
 
-function ifspace(e) {
-  e = e || window.event;
-  
-  if (e.key == " " || e.code == "Space" || e.keyCode == 32) {
+document.body.onkeyup = function(e) {
+  if (e.key == " " ||
+      e.code == "Space" ||      
+      e.keyCode == 32      
+  ) {
     determineChance()
-    var spints = parseInt(localStorage.getItem("rolls"))
-    localStorage.setItem("rolls", ++spints)
-    document.title = `Spins: ${numberWithCommas(spints)}`
   }
 }
