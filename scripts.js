@@ -34,6 +34,7 @@ function determineChance() {
     if (roll === 1) {
        const capColor = color[0].toUpperCase() + color.slice(1)
        document.getElementById("txt").innerText = `${capColor} - 1 in ${numberWithCommas(chance)}`
+       document.getElementById("finds").innerHTML = `${capColor}<br>`
        document.body.style.backgroundColor = color
        
        return
