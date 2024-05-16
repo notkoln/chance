@@ -39,6 +39,7 @@ function determineChance() {
   
   // If here, no hits
   document.getElementById("txt").innerText = 'Nothing.'
+  document.body.style.backgroundColor = 'white'
 }
 
 document.body.onkeyup = function(e) {
@@ -47,9 +48,6 @@ document.body.onkeyup = function(e) {
       e.keyCode == 32      
   ) {
     determineChance()
-    if (document.getElementById("txt").innerText = 'Nothing') {
-      document.body.style.backgroundColor = 'white'
-    }
     var spints = parseInt(localStorage.getItem("spins"))
     localStorage.setItem("rolls" ++spints)
     document.title = `Spins: ${spints}`
