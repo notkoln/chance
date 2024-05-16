@@ -41,7 +41,7 @@ function determineChance() {
   document.getElementById("txt").innerText = 'Nothing.'
 }
 
-window.keyup(function(e) {
+window.onkeyup(function(e) {
   if (e.code === "Space") {
     determineChance()
     var spints = parseInt(localStorage.getItem("rolls"))
