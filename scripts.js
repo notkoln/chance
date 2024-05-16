@@ -41,7 +41,7 @@ function determineChance() {
   document.getElementById("txt").innerText = 'Nothing.'
 }
 
-document.body.onkeyup(function(e) {
+document.body.onkeydown(function(e) {
   e = e || window.event;
   
   if (e.key == " " || e.code == "Space" || e.keyCode == 32) {
