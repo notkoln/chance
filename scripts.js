@@ -39,6 +39,7 @@ function determineChance() {
   
   // If here, no hits
   document.getElementById("txt").innerText = 'Nothing.'
+  document.body.style.backgroundColor = 'white'
 }
 
 document.body.onkeyup = function(e) {
