@@ -20,6 +20,7 @@ const chances = [
   { chance: 10000, color: 'green' },
   { chance: 1000, color: 'yellow' },
   { chance: 100, color: 'orange' },
+  { chance: 100, color: 'brown' },
   { chance: 10, color: 'red' },
   { chance: 5, color: 'tan' },
 ]
