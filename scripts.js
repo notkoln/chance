@@ -3,6 +3,10 @@ if (!spins) {
   localStorage.setItem("rolls", "0")
 }
 
+var spints = parseInt(localStorage.getItem("rolls"))
+localStorage.setItem("rolls", spints)
+document.title = `Spins: ${numberWithCommas(spints)}`
+
 const chances = [
   { chance: 10000000000000, color: 'tomato' },
   { chance: 1000000000000, color: 'magenta' },
