@@ -44,9 +44,9 @@ function determineChance() {
 
 document.body.addEventListener('keyup', event => {
   if (event.code === 'Space') {
-    determineChance()
     var spints = parseInt(localStorage.getItem("rolls"))
     localStorage.setItem("rolls", ++spints)
     document.title = `Spins: ${numberWithCommas(spints)}`
+    determineChance()
   }
 })
